@@ -11,9 +11,14 @@ library(readxl)
 library(reshape2)
 library(ggplot2)
 
+
+# Read data ---------------------------------------------------------------
+
 # Read data.xlsx
 d <- data.frame(read_excel("data.xlsx", sheet = "dataV2",
                            col_names = TRUE, col_types = NULL))
+
+# Calculations ------------------------------------------------------------
 
 # Name parameters
 congener <- d$congener
@@ -91,7 +96,9 @@ names(final.result) <- c("congener", "fract.diss.m", "fract.diss.cell",
                          "fract.cell", "fract.diss.cell.cell",
                          "fract.lip.cell", "fract.prot.cell")
 
-# Plots
+
+# Plots -------------------------------------------------------------------
+
 # (1) Just fractions in cell, medium and air
 # create data.frame with needed fractions
 p.1 <- final.result[,!names(final.result) %in% c("fract.diss.cell",
