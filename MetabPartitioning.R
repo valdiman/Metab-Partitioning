@@ -11,7 +11,6 @@ library(readxl)
 library(reshape2)
 library(ggplot2)
 
-
 # Read data ---------------------------------------------------------------
 
 # Read data.xlsx
@@ -95,7 +94,6 @@ names(final.result) <- c("congener", "fract.diss.m", "fract.diss.cell",
                          "fract.lip", "fract.prot", "fract.air",
                          "fract.cell", "fract.diss.cell.cell",
                          "fract.lip.cell", "fract.prot.cell")
-
 
 # Plots -------------------------------------------------------------------
 
