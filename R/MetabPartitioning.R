@@ -19,7 +19,7 @@ install.packages("extrafont")
 # Read data ---------------------------------------------------------------
 
 # Read data.xlsx
-d <- data.frame(read_excel("data.xlsx", sheet = "dataV2",
+d <- data.frame(read_excel("Data/data.xlsx", sheet = "dataV2",
                            col_names = TRUE, col_types = NULL))
 
 # Calculations ------------------------------------------------------------
@@ -34,13 +34,15 @@ logKpro.w <- d$logKprotein.water
 #Fixed parameters
 # 24-well plate https://www.corning.com/catalog/cls/documents/drawings/MD_Microplate_Dimension_Sheets_Multiple_Well.pdf
 # Multiwell dimensions
-Vt <- 3.47/1000 # Total volume L
-Vm <- 0.5/1000 # Medium volume L
-Va <- Vt-Vm # Air volume L
-A <- 1.93 # Area cm2
-ht <- 1.74 # Height cm
-r <- sqrt((A/pi)) # radius cm
-hm <- Vm*1000/(pi*r^2) # Medium height cm
+{
+  Vt <- 3.47/1000 # Total volume L
+  Vm <- 0.5/1000 # Medium volume L
+  Va <- Vt-Vm # Air volume L
+  A <- 1.93 # Area cm2
+  ht <- 1.74 # Height cm
+  r <- sqrt((A/pi)) # radius cm
+  hm <- Vm*1000/(pi*r^2) # Medium height cm
+}
 
 # Function to calculate fractions
 fraction = function(logKa.w, dUaw, logKlip.w, logKpro.w) {
@@ -128,7 +130,7 @@ p.1.plot$phase <- factor(p.1.plot$phase,
 ggplot(p.1.plot, aes(x = congener, y = fraction, fill = phase)) + 
   geom_bar(stat = "identity", col = "white", width = 0.9) +
   scale_fill_manual(labels = c("air" , "medium", "cell"),
-                    values = c("deepskyblue", "brown1", "coral4")) +
+                    values = c("#fee8c8", "#fdbb84", "#e34a33")) +
   theme_classic() +
   theme(aspect.ratio = 10/10,
         text = element_text(size = 14, family = "Helvetica",
@@ -163,7 +165,7 @@ p.2.plot$phase <- factor(p.2.plot$phase,
 ggplot(p.2.plot, aes(x = congener, y = fraction, fill = phase)) + 
   geom_bar(stat = "identity", col = "white", width = 0.9) +
   scale_fill_manual(labels = c("lipid" , "liquid/cytosol", "protein"),
-                    values = c("cornsilk3", "brown3", "darkslategray")) +
+                    values = c("#fee0d2", "#fc9272", "#de2d26")) +
   theme_classic() +
   theme(aspect.ratio = 10/10,
         text = element_text(size = 14, family = "Helvetica",
