@@ -5,11 +5,13 @@
 install.packages("readxl")
 install.packages("gridExtra")
 install.packages("ggplot2")
+install.packages("extrafont")
 
 # load libraries
 library(readxl)
 library(reshape2)
 library(ggplot2)
+library(extrafont)
 
 # Read data ---------------------------------------------------------------
 
@@ -110,10 +112,10 @@ p.1.plot <- melt(p.1, id.var = c("congener"),
 
 # Name the compounds
 p.1.plot$congener <- factor(p.1.plot$congener,
-                           levels = c('PCB3', '4-OH-PCB3', '4-OH-PCB3Sulf',
-                                      'PCB11', '4-OH-PCB11', '4-OH-PCB11Sulf',
-                                      'PCB25', '4-OH-PCB25', '4-OH-PCB25Sulf',
-                                      'PCB52', '4-OH-PCB52', '4-OH-PCB52Sulf'))
+                           levels = c('PCB3', '4-OH-PCB3', '4-OH-PCB3 sulfate',
+                                      'PCB11', '4-OH-PCB11', '4-OH-PCB11 sulfate',
+                                      'PCB25', '4-OH-PCB25', '4-OH-PCB25 sulfate',
+                                      'PCB52', '4-OH-PCB52', '4-OH-PCB52 sulfate'))
 
 # Organize fraction to be displayed in plot
 p.1.plot$phase <- factor(p.1.plot$phase,
@@ -121,16 +123,17 @@ p.1.plot$phase <- factor(p.1.plot$phase,
                                    'fract.cell'))
 
 ggplot(p.1.plot, aes(x = congener, y = fraction, fill = phase)) + 
-  geom_bar(stat = "identity", col = "white") +
+  geom_bar(stat = "identity", col = "white", width = 0.9) +
   scale_fill_manual(labels = c("air" , "medium", "cell"),
                     values = c("deepskyblue", "brown1", "coral4")) +
   theme_classic() +
+  theme(aspect.ratio = 10/10,
+        text = element_text(size = 14, family = "Helvetica",
+                            face = "bold", color = "black")) +
   xlab(expression(bold(""))) +
   ylab(expression("Fraction in well")) +
-  theme(axis.text.x = element_text(face = "bold", size = 8,
-                                   angle = 60, hjust = 1,
-                                   color = "black"),
-        axis.title.x = element_text(face = "bold", size = 8))
+  theme(axis.text.x = element_text(angle = 60, hjust = 1))
+
 
 # (2) Just fractions inside cell, i.e., protein, lipids and liquid/cytosol
 # create data.frame with needed fractions
@@ -144,10 +147,10 @@ p.2.plot <- melt(p.2, id.var = c("congener"),
 
 # Name the compounds
 p.2.plot$congener <- factor(p.2.plot$congener,
-                            levels = c('PCB3', '4-OH-PCB3', '4-OH-PCB3Sulf',
-                                       'PCB11', '4-OH-PCB11', '4-OH-PCB11Sulf',
-                                       'PCB25', '4-OH-PCB25', '4-OH-PCB25Sulf',
-                                       'PCB52', '4-OH-PCB52', '4-OH-PCB52Sulf'))
+                            levels = c('PCB3', '4-OH-PCB3', '4-OH-PCB3 sulfate',
+                                       'PCB11', '4-OH-PCB11', '4-OH-PCB11 sulfate',
+                                       'PCB25', '4-OH-PCB25', '4-OH-PCB25 sulfate',
+                                       'PCB52', '4-OH-PCB52', '4-OH-PCB52 sulfate'))
 
 # Organize fraction to be displayed in plot
 p.2.plot$phase <- factor(p.2.plot$phase,
@@ -155,12 +158,13 @@ p.2.plot$phase <- factor(p.2.plot$phase,
                                     'fract.prot.cell'))
 
 ggplot(p.2.plot, aes(x = congener, y = fraction, fill = phase)) + 
-  geom_bar(stat = "identity", col = "white") +
+  geom_bar(stat = "identity", col = "white", width = 0.9) +
   scale_fill_manual(labels = c("lipid" , "liquid/cytosol", "protein"),
                     values = c("cornsilk3", "brown3", "darkslategray")) +
   theme_classic() +
+  theme(aspect.ratio = 10/10,
+        text = element_text(size = 14, family = "Helvetica",
+                            face = "bold", color = "black")) +
   xlab(expression(bold(""))) +
   ylab(expression("Fraction in cell")) +
-  theme(axis.text.x = element_text(face = "bold", size = 8,
-                                   angle = 60, hjust = 1, color = "black"),
-        axis.title.x = element_text(face = "bold", size = 8))
+  theme(axis.text.x = element_text(angle = 60, hjust = 1))
