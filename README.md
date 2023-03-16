@@ -30,9 +30,10 @@ FILE OVERVIEW
 --------
 
 File Name: MetabPartitioning
-File Size: X kb
+File Size: 9 kb
 File Format: .R
-File description: Contains the raw code for the calculation of individual PCB fractions in "R".
+File description: Contains the raw code for the calculation of individual PCB fractions in
+the multiwell expereriments in "R".
 
 --------
 PREREQUISITES & DEPENDENCIES
@@ -55,5 +56,11 @@ This section of the ReadMe file provides short instructions on how to download a
 2. Click the "download" button beneath RStudio Desktop
 3. Click the button beneath "Download RStudio Desktop".  This will download the correct installation file based on the operating system detected.
 4. Run the installation file and follow on-screen instructions. 
+
+--------
+HOW TO RUN THE CODE
+--------
+
+It is recommended to create a project in RStudio and name it Metab-Partitioning. Paste and execute Subfolders.R code to generate the different folders. Then paste the MetabPartitioning.R into the R folder just generated. All the packages needed, with their respecting libraries, are included in the code. All the needed data are in the code. If needed, the fraction results can be exported as a csv file to the Output/Data/csv folder.
 
 
