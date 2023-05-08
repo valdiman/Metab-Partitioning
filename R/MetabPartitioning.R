@@ -125,6 +125,7 @@ fraction = function(logKa.w, dUaw, logKlip.w, logKpro.w)
   f.lip.c <- f.lip/f.cell
   # Fraction of protein in the cell
   f.prot.c <- f.prot/f.cell
+  # Combine all in frac
   frac <- c(f.dis.m, f.dis.c, f.lip, f.prot, f.air, f.cell, f.dis.c.c,
             f.lip.c, f.prot.c)
 }
@@ -166,7 +167,7 @@ p.1.plot$congener <- factor(p.1.plot$congener,
 p.1.plot$phase <- factor(p.1.plot$phase,
                         levels = c('fract.air', 'fract.diss.m',
                                    'fract.cell'))
-# Plot
+# Plot (Figure 7 (A))
 ggplot(p.1.plot, aes(x = congener, y = fraction, fill = phase)) + 
   geom_bar(stat = "identity", col = "white", width = 0.9) +
   scale_fill_manual(labels = c("air" , "medium", "cell"),
@@ -198,7 +199,7 @@ p.2.plot$congener <- factor(p.2.plot$congener,
 p.2.plot$phase <- factor(p.2.plot$phase,
                          levels = c('fract.lip.cell', 'fract.diss.cell.cell',
                                     'fract.prot.cell'))
-# Plot
+# Plot (Figure 7 (B))
 ggplot(p.2.plot, aes(x = congener, y = fraction, fill = phase)) + 
   geom_bar(stat = "identity", col = "white", width = 0.9) +
   scale_fill_manual(labels = c("lipid" , "liquid/cytosol", "protein"),
