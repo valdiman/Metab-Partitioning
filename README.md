@@ -20,8 +20,28 @@ This README file was generated on May 8 2023 by Andres Martinez.
 
 This work was supported by the National Institutes of Environmental Health Sciences (NIEHS) grant #P42ES013661.  The funding sponsor did not have any role in study design; in collection, analysis, and/or interpretation of data; and/or in the decision to submit this data for publication or deposit it in a repository.
 
+This README file describes a revised version of scripts for calculating the individual fraction of PCBs and their metabolites in multiwell experiments and the creation of Figure 7 in:
 
-This README file describes a revised version of scripts for calculating the individual fraction of PCBs and their metabolites in multiwell experiments used in this paper: Structure Activity Relationship of Lower Chlorinated Biphenyls and their Human-relevant Metabolites for Astrocyte Toxicity
+Structure Activity Relationship of Lower Chlorinated Biphenyls and their Human-relevant Metabolites for Astrocyte Toxicity 
+
+Neha Paranjape1,2, Laura E. Dean2, Andres Martinez3, Ronald B. Tjalkens4, Hans-Joachim Lehmler2, Jonathan A. Doorn1, * 
+
+1Department of Pharmaceutical Sciences & Experimental Therapeutics, College of Pharmacy, University of Iowa, Iowa City, IA, USA
+2Department of Occupational and Environmental Health, College of Public Health, University of Iowa, Iowa City, IA, USA
+3Department of Civil and Environmental Engineering, IIHR-Hydroscience & Engineering, University of Iowa, Iowa City, IA, USA
+4Department of Environmental and Radiological Health Sciences, College of Veterinary Medicine and Biomedical Sciences, Colorado State University, Fort Collins, CO USA. 
+
+ *Corresponding Author:  
+ Jonathan A. Doorn 
+Professor and Chair 
+Department of Pharmaceutical Sciences & Experimental Therapeutics 
+College of Pharmacy, 536 CPB 
+The University of Iowa 
+180 S. Grand Ave. 
+Iowa City, IA  52242 USA 
+ 
+Email:jonathan-doorn@uiowa.edu  
+TEL: 319-335-8834
 
 The script is developed for individual PCBs, OH-PCBs and sulfate-PCBs from experiments from Project 1, ISRP.
 
