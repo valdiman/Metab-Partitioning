@@ -1,9 +1,6 @@
 # Code developed to calculate fractions of selected PCBs and
 # their metabolites (i.e., OH-PCBs and OH-PCB sulfates) in
-# well experiments
-# Paper: Structure Activity Relationship of Lower Chlorinated
-# Biphenyls and their Human-relevant Metabolites for Astrocyte
-# Toxicity
+# well experiments and create figures (Figure 7 A and B)
 
 # Install packages and load libraries -------------------------------------
 # Packages
@@ -179,7 +176,6 @@ ggplot(p.1.plot, aes(x = congener, y = fraction, fill = phase)) +
   xlab(expression(bold(""))) +
   ylab(expression("Fraction in well")) +
   theme(axis.text.x = element_text(angle = 60, hjust = 1))
-
 
 # Figure 7 (B). Just fractions inside cell, i.e., protein, lipids and liquid/cytosol
 # Create data.frame with needed fractions
