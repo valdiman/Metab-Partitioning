@@ -78,5 +78,6 @@ EXTERNAL DATA
 --------
 
 Partitioning coefficients were obtained from UFZ-LSER database:
+
 Ulrich, N., Endo, S., Brown, T.N., Watanabe, N., Bronner, G., Abraham, M.H., Goss, K.-U., UFZ-LSER database v 3.2.1 [Internet], Leipzig, Germany, Helmholtz Centre for Environmental Research-UFZ. 2017 [accessed on 08.05.2023]. Available from http://www.ufz.de/lserd.
 Metabolites were obtained using their SMILE configuration.
