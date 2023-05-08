@@ -18,22 +18,12 @@ ORCID: 0000-0002-0572-1494
 
 This README file was generated on May 8 2023 by Andres Martinez.
 
-This work was supported by the National Institutes of Environmental Health Sciences (NIEHS) grant #P42ES013661.  The funding sponsor did not have any role in study design; in collection, analysis, and/or interpretation of data; in creation of the dataset; and/or in the decision to submit this data for publication or deposit it in a repository.
+This work was supported by the National Institutes of Environmental Health Sciences (NIEHS) grant #P42ES013661.  The funding sponsor did not have any role in study design; in collection, analysis, and/or interpretation of data; and/or in the decision to submit this data for publication or deposit it in a repository.
 
 
-This README file describes a revised version of scripts for calculating the individual fraction of PCBs in multiwell experiments used in this paper:
+This README file describes a revised version of scripts for calculating the individual fraction of PCBs and their metabolites in multiwell experiments used in this paper: Structure Activity Relationship of Lower Chlorinated Biphenyls and their Human-relevant Metabolites for Astrocyte Toxicity
 
-The script is developed for individual PCBs, OH-PCBs and sulfate-PCBs from experiments from Porject 1, ISRP.
-
---------
-FILE OVERVIEW
---------
-
-File Name: MetabPartitioning
-File Size: 9 kb
-File Format: .R
-File description: Contains the raw code for the calculation of individual PCB fractions in
-the multiwell expereriments in "R".
+The script is developed for individual PCBs, OH-PCBs and sulfate-PCBs from experiments from Project 1, ISRP.
 
 --------
 PREREQUISITES & DEPENDENCIES
@@ -61,6 +51,6 @@ This section of the ReadMe file provides short instructions on how to download a
 HOW TO RUN THE CODE
 --------
 
-It is recommended to create a project in RStudio and name it Metab-Partitioning. Paste and execute Subfolders.R code to generate the different folders. Then paste the MetabPartitioning.R into the R folder just generated. All the packages needed, with their respecting libraries, are included in the code. All the needed data are in the code. If needed, the fraction results can be exported as a csv file to the Output/Data/csv folder.
+It is recommended to create a project in RStudio and name it Metab-Partitioning. Paste and execute Subfolders.R code to generate the different folders. Then paste the MetabPartitioning.R into the R folder just generated. All the packages needed, with their respecting libraries, are included in the code. All the needed data are in the code. If needed, the fraction results can be exported as a csv file to the Output/Data/csv created folder.
 
 
