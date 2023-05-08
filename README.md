@@ -53,4 +53,10 @@ HOW TO RUN THE CODE
 
 It is recommended to create a project in RStudio and name it Metab-Partitioning. Paste and execute Subfolders.R code to generate the different folders. Then paste the MetabPartitioning.R into the R folder just generated. All the packages needed, with their respecting libraries, are included in the code. All the needed data are in the code. If needed, the fraction results can be exported as a csv file to the Output/Data/csv created folder.
 
+--------
+EXTERNAL DATA
+--------
 
+Partitioning coefficients were obtained from UFZ-LSER database:
+Ulrich, N., Endo, S., Brown, T.N., Watanabe, N., Bronner, G., Abraham, M.H., Goss, K.-U., UFZ-LSER database v 3.2.1 [Internet], Leipzig, Germany, Helmholtz Centre for Environmental Research-UFZ. 2017 [accessed on 08.05.2023]. Available from http://www.ufz.de/lserd.
+Metabolites were obtained using their SMILE configuration.
